@@ -1,0 +1,33 @@
+<!-- 轮播图 -->
+<view class="swipercontainer">
+  <swiper class="swiper" indicator-dots autoplay circular indicator-active-color="#ffffff">
+    <swiper-item class="it1" wx:for="{{picture}}" wx:key="index">
+      <image src="{{item.images}}" mode="aspectFill" class="swiperimg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 登录区 -->
+<view class="logincontainer">
+  <image src="../../images/u1.svg"></image>
+  <view>欢迎您</view>
+</view>
+<!-- 搜索区 -->
+<view class="search_container">
+  <input bindinput="searchKeyword" type="text" class="search_input" placeholder="搜索菜品" bindconfirm="goSearch" confirm-type="search" />
+  <image class="search_image" src="../../images/search.svg" bindtap="goSearch" />
+</view>
+<!-- 导航区 -->
+<view class="navcontainer">
+  <view class="nav_item" bindtap="toScanQRcode">
+  <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/lrvs7l36jqyexr9wvl16ifx1lnr8jaxs_.svg"></image>
+    <text>扫码</text>
+  </view>
+  <view class="nav_item" bindtap="toMenu">
+  <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/ijamq4xiszyyhdx5tfwknagodny77mrm_.svg"></image>
+    <text>菜单</text>
+  </view>
+  <view class="nav_item" bindtap="toLineup">
+  <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/e85du31k0lhuwewax3wh8k8cob7kjjiz_.svg"></image>
+    <text>排号</text>
+  </view>
+</view>
