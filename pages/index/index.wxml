@@ -19,15 +19,25 @@
 <!-- 导航区 -->
 <view class="navcontainer">
   <view class="nav_item" bindtap="toScanQRcode">
-  <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/lrvs7l36jqyexr9wvl16ifx1lnr8jaxs_.svg"></image>
+    <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/lrvs7l36jqyexr9wvl16ifx1lnr8jaxs_.svg"></image>
     <text>扫码</text>
   </view>
   <view class="nav_item" bindtap="toMenu">
-  <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/ijamq4xiszyyhdx5tfwknagodny77mrm_.svg"></image>
+    <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/ijamq4xiszyyhdx5tfwknagodny77mrm_.svg"></image>
     <text>菜单</text>
   </view>
   <view class="nav_item" bindtap="toLineup">
-  <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/e85du31k0lhuwewax3wh8k8cob7kjjiz_.svg"></image>
+    <image class="nav_item_image" src="https://6d79-mydb-8gv7ks01e436cc8d-1312118153.tcb.qcloud.la/cloudbase-cms/upload/2022-05-27/e85du31k0lhuwewax3wh8k8cob7kjjiz_.svg"></image>
     <text>排号</text>
+  </view>
+</view>
+<!-- 推荐区 -->
+<view class="recommend_container">
+  <view class="recommend_title">
+    <text>进店必点</text>
+    <text>更多></text>
+  </view>
+  <view class="recommend_detail">
+  
   </view>
 </view>

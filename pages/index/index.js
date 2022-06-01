@@ -51,6 +51,11 @@ Page({
       this.setData({
         picture: res.data
       })
+    }),
+    wx.cloud.callFunction({
+      name: 'getRecommendList'
+    }).then(res => {
+      console.log(res)
     })
   },
   /**
