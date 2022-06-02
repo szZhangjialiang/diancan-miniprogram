@@ -73,3 +73,28 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.recommend_detail{
+  display: flex;
+  margin-top: 30rpx;
+}
+.recommend_detail_picture{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+  min-width: 140rpx;
+}
+.recommend_detail_text{
+  font-size: 30rpx;
+  padding-left: 30rpx;
+  /* 文本不换行 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item_price{
+  font-size: 36rpx;
+}
+.item_saled{
+  font-size: 24rpx;
+  color:gray;
+}

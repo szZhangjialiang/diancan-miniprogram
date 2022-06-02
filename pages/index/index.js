@@ -6,6 +6,7 @@ Page({
    */
   data: {
     picture: [],
+    recommendList: []
   },
   // 绑定输入数据
   searchKeyword(e){
@@ -55,7 +56,12 @@ Page({
     wx.cloud.callFunction({
       name: 'getRecommendList'
     }).then(res => {
-      console.log(res)
+      this.setData({
+        recommendList : res.result.data
+      })
+    })
+    .catch(err => {
+      console.log('错误了',err)
     })
   },
   /**
