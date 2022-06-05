@@ -8,8 +8,21 @@
 </view>
 <!-- 登录区 -->
 <view class="logincontainer">
-  <image src="../../images/u1.svg"></image>
-  <view>欢迎您</view>
+  <button 
+  style="width: 260rpx;height: 80rpx;"
+  class="loginButton" 
+  plain="true"
+  bindtap="login" 
+  wx:if="{{!hasUserInfo}}">登录
+</button>
+  <view wx:else class="userInfo">
+    <image class="userImage" src="{{userInfo.avatarUrl}}"></image>
+    <view class="userName">欢迎您~{{userInfo.nickName}}</view>
+    <button class="logOut" bindtap="logOut" style="width: 160rpx;height: 100rpx;line-height: 100rpx;margin: 12rpx 0 10rpx 140rpx;" type="primary" size="mini"
+    wx:if="{{hasUserInfo}}"
+    >退出登录</button>
+  </view>
+
 </view>
 <!-- 搜索区 -->
 <view class="search_container">

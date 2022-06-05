@@ -6,7 +6,9 @@ Page({
    */
   data: {
     picture: [],
-    recommendList: []
+    recommendList: [],
+    userInfo: '',
+    hasUserInfo: false
   },
   // 绑定输入数据
   searchKeyword(e){
@@ -18,7 +20,7 @@ Page({
   console.log('出发了',keyword)
   if(keyword && keyword.length > 0){
     wx.navigateTo({
-      url: '/pages/drink/drink?keyword='+keyword
+      url: `/pages/drink/drink?keyword=${keyword}`
     })
   }else{
     console.log('不能为空')
@@ -43,6 +45,33 @@ Page({
       url: '/pages/lineup/lineup',
     })
   },
+  // 登录
+  login(){
+  wx.getUserProfile({
+    desc: 'test',
+    success:(res) => {
+      let userInfo = res.userInfo
+      wx.setStorageSync('loginInfo', userInfo)
+      this.setData({
+        userInfo,
+        hasUserInfo : true
+      })
+    },
+    fail: (err) => {
+      console.log('拒绝授权',err)
+    }
+  })
+  
+  },
+  // 登出
+  logOut(){
+    this.setData({
+      hasUserInfo:false,
+      userInfo:''
+    }),
+    wx.clearStorage()
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -63,7 +92,18 @@ Page({
     .catch(err => {
       console.log('错误了',err)
     })
+    // 如果存在登录缓存则不需要再次授权
+    wx.getStorage({
+      key: 'loginInfo',
+      success:(res)=>{
+        this.setData({
+          userInfo:res.data,
+          hasUserInfo:true
+        })
+      }
+    })
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
