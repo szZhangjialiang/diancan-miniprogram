@@ -1,22 +1,27 @@
-// pages/order/order.js
+// pages/contact/contact.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    longitude: '',
+    latitude: ''
   },
-  contact(){
-  wx.navigateTo({
-    url: '/pages/contact/contact',
-  })
-},
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+wx.getLocation({
+  altitude: 'false',
+  success: (res) =>{
+    this.setData({
+      longitude: res.longitude,
+      latitude: res.latitude
+    })
+  }
+})
   },
 
   /**

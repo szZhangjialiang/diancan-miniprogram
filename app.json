@@ -4,8 +4,14 @@
     "pages/menu/menu",
     "pages/order/order",
     "pages/drink/drink",
-    "pages/lineup/lineup"
+    "pages/lineup/lineup",
+    "pages/contact/contact"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的位置用于导航"
+    }
+  },
   "tabBar": {
     "color": "#797979",
     "selectedColor": "#0000ff",
