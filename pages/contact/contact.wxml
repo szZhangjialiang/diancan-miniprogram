@@ -1,1 +1,10 @@
-<map name="" class="map" longitude="{{longitude}}" latitude="{{latitude}}"></map>
+<map 
+name="map" 
+class="map" 
+longitude="114.216463" 
+latitude="22.631727"
+markers="{{markers}}"
+data-marker="{{markers[0]}}"
+bindmarkertap="navtous"
+></map>
+<view class="add">aaa</view>

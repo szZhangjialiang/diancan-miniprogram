@@ -5,23 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    longitude: '',
-    latitude: ''
+    currentLongitude: '',
+    currentLatitude: '',
+    markers: [{
+      id: 1,
+      title: '阿玲的',
+      latitude:22.631727,
+      longitude:114.216463,
+      width: '40rpx',
+      height: '70rpx',
+    }],
   },
+  navtous(e) {
+    // 获取当前位置
+    wx.getLocation({
+      type: 'gcj02',
+      success: (res) => {
+        wx.openLocation({
+          address: '深圳茶博园',
+          name: '阿玲的店',
+          latitude:e.target.dataset.marker.latitude,
+          longitude:e.target.dataset.marker.longitude,
+        })
+      }
+    })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-wx.getLocation({
-  altitude: 'false',
-  success: (res) =>{
-    this.setData({
-      longitude: res.longitude,
-      latitude: res.latitude
-    })
-  }
-})
+
   },
 
   /**
