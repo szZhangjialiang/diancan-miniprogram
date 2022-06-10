@@ -9,10 +9,10 @@ Page({
     currentLatitude: '',
     markers: [{
       id: 1,
-      title: '阿玲的',
+      title: '点击可导航',
       latitude:22.631727,
       longitude:114.216463,
-      width: '40rpx',
+      width: '70rpx',
       height: '70rpx',
     }],
   },
@@ -26,6 +26,18 @@ Page({
           name: '阿玲的店',
           latitude:e.target.dataset.marker.latitude,
           longitude:e.target.dataset.marker.longitude,
+        })
+      },
+      fail: () =>{
+        wx.showModal({
+          title: '获取您的位置',
+          content: '需要您授权开启定位，点击去设置开启',
+          confirmText: '去设置',
+          success: (res) => {
+            if (res.confirm) {
+              wx.openSetting()
+            }
+          }
         })
       }
     })

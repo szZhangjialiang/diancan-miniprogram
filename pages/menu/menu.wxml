@@ -1,2 +1,21 @@
-<!--pages/menu/menu.wxml-->
-<text>pages/menu/menu.wxml</text>
+<scroll-view wx:for="{{cafeList}}">
+  <!-- 商品列表 -->
+  <view class="cafeList_container">
+    <image class="cafeList_picture" src="{{item.picture}}" />
+    <view class="cafeList_itemInfo">
+      <view>{{item.type}}</view>
+      <view>售价：￥{{item.price}}</view>
+      <view class="cafeList_saled">销量：{{item.saled}}</view>
+    </view>
+    <!-- 商品购买数量 -->
+    <view class="cart">
+      <image
+      data-itemInfo="{{cafeList}}"
+      bindtap="add" 
+      class="plus" 
+      src="../../images/plus_icon.svg"/>
+      <view class="number">{{number}}</view>
+      <image class="minus" src="../../images/minus.svg" />
+    </view>
+  </view>
+</scroll-view>

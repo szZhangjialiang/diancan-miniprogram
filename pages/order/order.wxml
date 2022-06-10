@@ -1,1 +1,1 @@
-<view bindtap="contact">联系我们</view>
+<view bindtap="toContact">联系我们</view>

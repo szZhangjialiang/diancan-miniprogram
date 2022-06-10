@@ -2,10 +2,18 @@
   "pages": [
     "pages/index/index",
     "pages/menu/menu",
-    "pages/order/order",
     "pages/drink/drink",
     "pages/lineup/lineup",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/order/order"
+  ],
+  "subpackages": [
+    {
+      "root": "subpackages",
+      "pages": [
+        "cafeDetail/cafeDetail"
+      ]
+    }
   ],
   "permission": {
     "scope.userLocation": {

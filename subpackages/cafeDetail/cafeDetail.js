@@ -1,4 +1,4 @@
-// pages/order/order.js
+// subpackages/cafeDetail/cafeDetail.js
 Page({
 
   /**
@@ -7,11 +7,7 @@ Page({
   data: {
 
   },
-  toContact(){
-  wx.navigateTo({
-    url: '/pages/contact/contact',
-  })
-},
+
   /**
    * 生命周期函数--监听页面加载
    */
