@@ -12,20 +12,18 @@
 .cafeList_saled{
   color: gray;
 }
-/* 购物车 */
+/* 商品购买数量 */
 .cart{
   display: flex;
+  align-items: center;
   margin-right: 20rpx;
+  line-height: 200rpx;
 }
 .plus{
   width: 50rpx;
   height: 50rpx;
 }
-.number{
-  width: 90rpx;
-  text-align: center;
-}
-.minus{
+.cart_text{
   width: 50rpx;
-  height: 50rpx;
+  text-align: center;
 }

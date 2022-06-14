@@ -9,13 +9,8 @@
     </view>
     <!-- 商品购买数量 -->
     <view class="cart">
-      <image
-      data-itemInfo="{{cafeList}}"
-      bindtap="add" 
-      class="plus" 
-      src="../../images/plus_icon.svg"/>
-      <view class="number">{{number}}</view>
-      <image class="minus" src="../../images/minus.svg" />
+      <image data-index="{{index}}" bindtap="add" class="plus" src="../../images/加号.svg" />
+      <text class="cart_text">{{item.quantity}}</text>
     </view>
   </view>
 </scroll-view>

@@ -5,7 +5,8 @@
     "pages/drink/drink",
     "pages/lineup/lineup",
     "pages/contact/contact",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/cart/cart"
   ],
   "subpackages": [
     {
@@ -31,6 +32,10 @@
       {
         "pagePath": "pages/menu/menu",
         "text": "菜单"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/order/order",
