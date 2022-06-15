@@ -10,8 +10,12 @@
       </view>
       <!-- 商品购买数量 -->
       <view class="cart">
-        <image data-index="{{index}}" bindtap="add" class="plus" src="../../images/加号.svg" />
+        <button style="width: 20%;height:28%;" type="primary"
+         data-index="{{index}}" bindtap="add" class="plus">+</button>
         <text class="cart_text">{{item.quantity}}</text>
+        <button disabled="{{btnShow}}" style="width: 20%;height:28%;" type="primary"
+         data-index="{{index}}" bindtap="minus" class="minus">-</button>
+         
       </view>
     </view>
   </scroll-view>

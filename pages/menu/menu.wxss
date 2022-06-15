@@ -23,11 +23,18 @@
   line-height: 200rpx;
 }
 .plus{
-  width: 50rpx;
-  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.minus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cart_text{
-  width: 50rpx;
+  width: 60rpx;
+  font-size: 35rpx;
   text-align: center;
 }
 /* 底部购物车 */

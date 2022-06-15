@@ -3,7 +3,8 @@ Page({
   data: {
     cafeList: [],
     totalItem:0,
-    totalPrice:0
+    totalPrice:0,
+    btnShow:''
   },
   // 加入购物车
   add(e) {
@@ -17,6 +18,23 @@ Page({
      cafeList : carts,
    }),
    this.getTotalPrice()
+  },
+  // 减少购物车数量
+  minus(e){
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.cafeList
+    let quantity = carts[index].quantity
+    
+    if(carts[index].quantity == 0){
+     
+    }else{
+      quantity = quantity - 1
+      carts[index].quantity = quantity
+      this.setData({
+        cafeList : carts,
+        totalItem: carts[index].quantity
+      })
+    }
   },
   // 计算总价
   getTotalPrice(){
@@ -42,5 +60,6 @@ Page({
           cafeList: res.data
         })
       })
-  }
+  },
+  
 })
