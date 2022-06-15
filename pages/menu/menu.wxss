@@ -1,3 +1,6 @@
+.menu_root{
+  padding-bottom: 80rpx;
+}
 .cafeList_container{
   display: flex;
 }
@@ -26,4 +29,46 @@
 .cart_text{
   width: 50rpx;
   text-align: center;
+}
+/* 底部购物车 */
+.bottom_carts{
+  display: flex;
+  position: fixed;
+  line-height: 80rpx;
+  left: 0;
+  bottom: 0;
+  height: 90rpx;
+  width: 100%;
+  background-color: rgb(191, 187, 196);
+}
+.cartsPic{
+  width: 200rpx;
+}
+.carts_image{
+  position: absolute;
+  left: 60rpx;
+  bottom: 30rpx;
+  background-color: chocolate;
+  border-radius: 26rpx;
+  width: 100rpx;
+  height: 100rpx;
+ 
+}
+.total_item{
+width: 200rpx;
+background-color: cadetblue;
+}
+.total_item_text{
+  width: 50rpx;
+  text-align: center;
+}
+.totalPrice{
+  display: flex;
+  flex: 1;
+}
+.ok{
+  width: 200rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: brown;
 }

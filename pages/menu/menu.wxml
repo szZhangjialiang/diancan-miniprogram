@@ -1,16 +1,29 @@
-<scroll-view wx:for="{{cafeList}}">
-  <!-- 商品列表 -->
-  <view class="cafeList_container">
-    <image class="cafeList_picture" src="{{item.picture}}" />
-    <view class="cafeList_itemInfo">
-      <view>{{item.type}}</view>
-      <view>售价：￥{{item.price}}</view>
-      <view class="cafeList_saled">销量：{{item.saled}}</view>
+<view class="menu_root">
+  <scroll-view>
+    <!-- 商品列表 -->
+    <view class="cafeList_container" wx:for="{{cafeList}}" wx:key="index">
+      <image class="cafeList_picture" src="{{item.picture}}" />
+      <view class="cafeList_itemInfo">
+        <view>{{item.type}}</view>
+        <view>售价：￥{{item.price}}</view>
+        <view class="cafeList_saled">销量：{{item.saled}}</view>
+      </view>
+      <!-- 商品购买数量 -->
+      <view class="cart">
+        <image data-index="{{index}}" bindtap="add" class="plus" src="../../images/加号.svg" />
+        <text class="cart_text">{{item.quantity}}</text>
+      </view>
     </view>
-    <!-- 商品购买数量 -->
-    <view class="cart">
-      <image data-index="{{index}}" bindtap="add" class="plus" src="../../images/加号.svg" />
-      <text class="cart_text">{{item.quantity}}</text>
-    </view>
+  </scroll-view>
+</view>
+<!-- 底部购物车区域 -->
+<view class="bottom_carts">
+  <view class="cartsPic">
+    <image class="carts_image" src="../../images/购物车7.svg"></image>
   </view>
-</scroll-view>
+  <view class="totalPrice">
+    总计：<text>{{totalPrice}} 元</text>
+    ,共<view class="total_item_text"> {{totalItem}}</view>件
+  </view>
+  <view class="ok" bindtap="toCart">选好了</view>
+</view>

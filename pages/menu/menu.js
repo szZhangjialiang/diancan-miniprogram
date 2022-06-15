@@ -2,21 +2,38 @@ const db = wx.cloud.database()
 Page({
   data: {
     cafeList: [],
+    totalItem:0,
+    totalPrice:0
   },
+  // 加入购物车
   add(e) {
-   console.log(e) 
    let index = e.currentTarget.dataset.index
-   console.log('这是index',index)
    let carts = this.data.cafeList
    let quantity = carts[index].quantity
    quantity = quantity + 1
    carts[index].quantity = quantity
-   console.log('这是quantity',quantity)
 
    this.setData({
-     cafeList : carts
+     cafeList : carts,
+   }),
+   this.getTotalPrice()
+  },
+  // 计算总价
+  getTotalPrice(){
+   let item = this.data.cafeList
+   let totalItem = 0
+   for (let index = 0; index < item.length; index++) {
+    totalItem += item[index].quantity;
+   }
+   this.setData({
+    totalItem,
    })
-   console.log('修改quantity后',this.data.cafeList)
+  },
+  // 跳转至购物车详情页
+  toCart(){
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
   },
   onLoad() {
     db.collection('cafe').get()
