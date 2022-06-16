@@ -100,6 +100,12 @@ Page({
           userInfo:res.data,
           hasUserInfo:true
         })
+      },
+      fail:(res)=>{
+        wx.showToast({
+          title: '请先登录',
+          icon: 'none'
+        })
       }
     })
   },
