@@ -26,8 +26,8 @@
     <image class="carts_image" src="../../images/购物车7.svg"></image>
   </view>
   <view class="totalPrice">
-    总计：<text>{{totalPrice}} 元</text>
-    ,共<view class="total_item_text"> {{totalItem}}</view>件
+    总计：<text class="total_price_text">￥{{totalPrice}}</text>
+    共<view class="total_item_text"> {{totalItem}}</view>件
   </view>
   <view class="ok" bindtap="toCart">选好了</view>
 </view>

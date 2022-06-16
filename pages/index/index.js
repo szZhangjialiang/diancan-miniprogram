@@ -48,7 +48,7 @@ Page({
   // 登录
   login(){
   wx.getUserProfile({
-    desc: 'test',
+    desc: '获取您的账户昵称、头像',
     success:(res) => {
       let userInfo = res.userInfo
       wx.setStorageSync('loginInfo', userInfo)
