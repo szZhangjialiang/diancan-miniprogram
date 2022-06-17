@@ -1,0 +1,23 @@
+
+.navigator{
+  display: flex;
+}
+.image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.name_price{
+  margin-left: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly
+}
+/* 无搜索结果区 */
+.empty_result{
+  text-align: center;
+  margin-top: 60%;
+}
+.no_result_image{
+width: 200rpx;
+height: 200rpx;
+}

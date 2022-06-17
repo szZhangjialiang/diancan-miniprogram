@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/menu/menu",
-    "pages/drink/drink",
+    "pages/search/search",
     "pages/lineup/lineup",
     "pages/contact/contact",
     "pages/order/order",

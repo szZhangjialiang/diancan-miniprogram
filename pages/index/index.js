@@ -20,7 +20,7 @@ Page({
   console.log('出发了',keyword)
   if(keyword && keyword.length > 0){
     wx.navigateTo({
-      url: `/pages/drink/drink?keyword=${keyword}`
+      url: `/pages/search/search?keyword=${keyword}`
     })
   }else{
     console.log('不能为空')

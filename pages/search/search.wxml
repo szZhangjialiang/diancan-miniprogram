@@ -1,0 +1,15 @@
+<view wx:if="{{!emptyResult}}">
+  <view class="searchResult" wx:for="{{searchResult}}" wx:key="_id">
+    <navigator class="navigator" url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}">
+      <image class="image" src="{{item.picture}}"></image>
+      <view class="name_price">
+        <view class="name">{{item.type}}</view>
+        <view class="price"><text>￥</text>{{item.price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view wx:else class="empty_result">
+  <view class="no_result_text">找不到你想要的，换个试试</view>
+  <image class="no_result_image" src="../../images/搜索.svg"></image>
+</view>

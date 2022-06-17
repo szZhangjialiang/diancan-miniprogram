@@ -8,25 +8,18 @@
 </view>
 <!-- 登录区 -->
 <view class="logincontainer">
-  <button 
-  style="width: 260rpx;height: 80rpx;"
-  class="loginButton" 
-  plain="true"
-  bindtap="login" 
-  wx:if="{{!hasUserInfo}}">登录
-</button>
+  <button style="width: 260rpx;height: 80rpx;" class="loginButton" plain="true" bindtap="login" wx:if="{{!hasUserInfo}}">登录
+  </button>
   <view wx:else class="userInfo">
     <image class="userImage" src="{{userInfo.avatarUrl}}"></image>
     <view class="userName">欢迎您~{{userInfo.nickName}}</view>
-    <button class="logOut" bindtap="logOut" style="width: 160rpx;height: 100rpx;line-height: 100rpx;margin: 12rpx 0 10rpx 140rpx;" type="primary" size="mini"
-    wx:if="{{hasUserInfo}}"
-    >退出登录</button>
+    <button class="logOut" bindtap="logOut" style="width: 160rpx;height: 100rpx;line-height: 100rpx;margin: 12rpx 0 10rpx 140rpx;" type="primary" size="mini" wx:if="{{hasUserInfo}}">退出登录</button>
   </view>
 
 </view>
 <!-- 搜索区 -->
 <view class="search_container">
-  <input bindinput="searchKeyword" type="text" class="search_input" placeholder="搜索菜品" bindconfirm="goSearch" confirm-type="search" />
+  <input bindinput="searchKeyword" type="text" class="search_input" placeholder="想找点喝的？戳我！" bindconfirm="goSearch" confirm-type="search" />
   <image class="search_image" src="../../images/search.svg" bindtap="goSearch" />
 </view>
 <!-- 导航区 -->

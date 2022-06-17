@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/search/search",
+          "query": "keyword=咖啡",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
