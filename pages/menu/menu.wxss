@@ -5,6 +5,7 @@
   display: flex;
 }
 .cafeList_picture{
+  margin: 0 0 20rpx 20rpx;
   width: 200rpx;
   height: 200rpx;
 }

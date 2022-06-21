@@ -43,12 +43,13 @@
     <text>进店必点</text>
     <text>更多></text>
   </view>
-  <view class="recommend_detail" wx:for="{{recommendList}}" wx:key="index">
-    <image class="recommend_detail_picture" src="{{item.picture}}"></image>
+ 
+  <navigator url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}" class="recommend_detail" wx:for="{{recommendList}}" wx:key="index">
+    <image class="recommend_detail_picture" src="{{item.picture[1]}}"></image>
     <view class="recommend_detail_text">
       <view class="item_type">{{item.type}}</view>
       <view class="item_price">￥{{item.price}}</view>
       <view class="item_saled">销量：{{item.saled}}</view>
     </view>
-  </view>
+  </navigator>
 </view>

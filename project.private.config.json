@@ -17,7 +17,7 @@
         {
           "name": "",
           "pathName": "pages/search/search",
-          "query": "keyword=咖啡",
+          "query": "keyword=拿铁",
           "launchMode": "default",
           "scene": null
         }

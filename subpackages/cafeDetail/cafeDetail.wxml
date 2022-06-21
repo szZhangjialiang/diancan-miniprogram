@@ -1,2 +1,4 @@
-<!--subpackages/cafeDetail/cafeDetail.wxml-->
-<text>subpackages/cafeDetail/cafeDetail.wxml</text>
+<view>
+<image src=""></image>
+<text>{{cafeDetail.name}}</text>
+</view>
