@@ -41,10 +41,13 @@
 <view class="recommend_container">
   <view class="recommend_title">
     <text>进店必点</text>
-    <text>更多></text>
+    <text bindtap="toMenu">更多></text>
   </view>
- 
-  <navigator url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}" class="recommend_detail" wx:for="{{recommendList}}" wx:key="index">
+  <!-- 推荐区 -->
+  <navigator url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}&image={{item.picture[0]}}&describe={{item.describe}}" 
+  class="recommend_detail" 
+  wx:for="{{recommendList}}" 
+  wx:key="index">
     <image class="recommend_detail_picture" src="{{item.picture[1]}}"></image>
     <view class="recommend_detail_text">
       <view class="item_type">{{item.type}}</view>

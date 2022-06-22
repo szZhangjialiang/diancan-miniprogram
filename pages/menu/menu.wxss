@@ -1,8 +1,10 @@
-.menu_root{
-  padding-bottom: 80rpx;
+
+.scr{
+  height:1040rpx;
 }
 .cafeList_container{
   display: flex;
+  
 }
 .cafeList_picture{
   margin: 0 0 20rpx 20rpx;

@@ -1,8 +1,10 @@
-<view class="menu_root">
-  <scroll-view>
+<scroll-view scroll-y="true" class="scr" enable-back-to-top="true">
+  <view class="menu_root">
     <!-- 商品列表 -->
     <view class="cafeList_container" wx:for="{{cafeList}}" wx:key="index">
-      <image class="cafeList_picture" src="{{item.picture[1]}}" />
+      <navigator hover-class="none" url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}&image={{item.picture[0]}}&describe={{item.describe}}">
+        <image class="cafeList_picture" src="{{item.picture[1]}}" />
+      </navigator>
       <view class="cafeList_itemInfo">
         <view>{{item.type}}</view>
         <view>售价：￥{{item.price}}</view>
@@ -10,16 +12,15 @@
       </view>
       <!-- 商品购买数量 -->
       <view class="cart">
-        <button style="width: 20%;height:28%;" type="primary"
-         data-index="{{index}}" bindtap="add" class="plus">+</button>
+        <button style="width: 20%;height:28%;" type="primary" data-index="{{index}}" catchtap="add" class="plus">+</button>
         <text class="cart_text">{{item.quantity}}</text>
-        <button disabled="{{btnShow}}" style="width: 20%;height:28%;" type="primary"
-         data-index="{{index}}" bindtap="minus" class="minus">-</button>
-         
+        <button disabled="{{btnShow}}" style="width: 20%;height:28%;" type="primary" data-index="{{index}}" bindtap="minus" class="minus">-</button>
       </view>
     </view>
-  </scroll-view>
-</view>
+
+  </view>
+</scroll-view>
+
 <!-- 底部购物车区域 -->
 <view class="bottom_carts">
   <view class="cartsPic">
