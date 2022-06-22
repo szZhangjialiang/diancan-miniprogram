@@ -1,1 +1,13 @@
-/* subpackages/cafeDetail/cafeDetail.wxss */
+.cafeInfo{
+  display: flex;
+  flex-direction: column;
+}
+.cafeImage{
+  width: 100%;
+}
+.cafeTitle{
+  margin: 40rpx 10rpx;
+}
+.cafeDescribe{
+  margin: 20rpx 10rpx;
+}

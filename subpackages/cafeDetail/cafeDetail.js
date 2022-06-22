@@ -13,6 +13,7 @@ Page({
    */
   onLoad(options) {
    let cafeDetail = options
+   console.log(cafeDetail)
    this.setData({
      cafeDetail,
    })

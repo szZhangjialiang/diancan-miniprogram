@@ -1,4 +1,5 @@
-<view>
-<image src=""></image>
-<text>{{cafeDetail.name}}</text>
+<view class="cafeInfo">
+<image class="cafeImage" src="{{cafeDetail.image}}"></image>
+<text class="cafeTitle">{{cafeDetail.name}}</text>
+<text class="cafeDescribe">{{cafeDetail.describe}}</text>
 </view>

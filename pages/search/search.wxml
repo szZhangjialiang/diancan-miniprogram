@@ -1,6 +1,6 @@
 <view wx:if="{{!emptyResult}}">
   <view class="searchResult" wx:for="{{searchResult}}" wx:key="_id">
-    <navigator class="navigator" hover-class="none" url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}">
+    <navigator class="navigator" hover-class="none" url="/subpackages/cafeDetail/cafeDetail?name={{item.type}}&image={{item.picture[0]}}&describe={{item.describe}}">
       <image class="image" src="{{item.picture[1]}}"></image>
       <view class="name_price">
         <view class="name">{{item.type}}</view>
