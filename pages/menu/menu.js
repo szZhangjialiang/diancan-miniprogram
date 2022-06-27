@@ -17,6 +17,7 @@ Page({
    this.setData({
      cafeList : carts,
    }),
+   this.cartStorage()
    this.getTotalCount()
    this.getTotalPrice()
   },
@@ -69,6 +70,10 @@ Page({
     wx.switchTab({
       url: '/pages/cart/cart',
     })
+  },
+  // 更新购物车并缓存
+  cartStorage(){
+    wx.setStorageSync('cartItem', this.data.cafeList)
   },
   onLoad() {
     db.collection('cafe').get()

@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cartItem: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+  
   },
 
   /**
@@ -26,7 +26,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+  let cartItem = wx.getStorageSync('cartItem')
+  let newArr = []
+  for (const iterator of cartItem) {
+    console.log('ss',iterator.quantity)
+    if(iterator.quantity != 0){
+      newArr.push(iterator)
+    }
+  }
+  console.log('遍历后',newArr)
+  this.setData({
+    cartItem,
+  })
   },
 
   /**
