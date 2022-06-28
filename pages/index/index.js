@@ -69,7 +69,12 @@ Page({
       hasUserInfo:false,
       userInfo:''
     }),
-    wx.clearStorage()
+    wx.removeStorage({
+      key: 'loginInfo',
+      success: res => {
+        console.log('推出成功',res)
+      }
+    })
   },
   
   /**

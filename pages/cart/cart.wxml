@@ -1,3 +1,7 @@
+<view wx:for="{{cartItem}}" wx:key="_id" class="flex">
 <view>
-<text>{{cartItem.type}}</text>
+<image class="image" src="{{item.picture[1]}}"></image>
+</view>
+<view class="middle type_width">{{item.type}}</view>
+<view class="middle quan_width">数量：{{item.quantity}}</view>
 </view>

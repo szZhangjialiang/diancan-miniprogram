@@ -17,9 +17,9 @@ Page({
    this.setData({
      cafeList : carts,
    }),
-   this.cartStorage()
    this.getTotalCount()
    this.getTotalPrice()
+   this.cartStorage()
   },
   // 减少购物车数量
   minus(e){
@@ -41,6 +41,7 @@ Page({
       })
       this.getTotalCount()
       this.getTotalPrice()
+      this.cartStorage()
     }
   },
   // 计算总数量
@@ -82,6 +83,7 @@ Page({
           cafeList: res.data
         })
       })
+      this.cartStorage()
   },
   
 })

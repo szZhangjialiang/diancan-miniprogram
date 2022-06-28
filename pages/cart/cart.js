@@ -36,7 +36,7 @@ Page({
   }
   console.log('遍历后',newArr)
   this.setData({
-    cartItem,
+    cartItem: newArr
   })
   },
 
